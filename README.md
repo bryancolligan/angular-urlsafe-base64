@@ -7,14 +7,10 @@ Angular implementation that matches Python's base64.urlsafe_b64encode and base64
 ### Bower
 
 ```
-bower install angular-base64
+bower install angular-urlsafe-base64
 ```
 
-**NB:** The `ngBase64` bower package is deprecated due to camel casing issues on case-sensitive file systems.
 
-```html
-<script src="bower_components/angular-base64/angular-base64.js"></script>
-```
 
 ## Usage
 
@@ -27,7 +23,9 @@ angular
         function($base64, $scope) {
         
             $scope.encoded = $base64.encode('a string');
+            $scope.urlsafe_encoded = $base64.url_safeencode('a string');
             $scope.decoded = $base64.decode('YSBzdHJpbmc=');
+            $scope.urlsafe_decoded = $base64.urlsafe_decode('YSBzdHJpbmc=');
     }]);
 ```
 
@@ -48,18 +46,4 @@ angular
     }]);
 ```
 
-### *URL Safety*
 
-If you want to transmit a base64 encoded string in a url you must make it "URL safe" by encoding it with `encodeURIComponent`.
-
-```javascript
-var base64EncodedString = $base64.encode('a string');
-var urlSafeBase64EncodedString = encodeURIComponent(base64EncodedString);
-```
-
-To decode the above string use `decodeURIComponent`, then `decode`.
-
-```javascript
-var base64EncodedString = decodeURIComponent('YSBzdHJpbmc%3D');
-var decodedString = $base64.decode(base64EncodedString);
-```
