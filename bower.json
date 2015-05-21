@@ -1,0 +1,27 @@
+{
+  "name": "angular-urlsafe-base64",
+  "version": "1",
+  "authors": [
+    "bryan colligan"
+  ],
+  "description": "Angular implementation that matches Python's base64.urlsafe_b64encode and base64.urlsafe_b64decode",
+  "main": "urlsafe-base64.js",
+  "keywords": [
+    "urlsafe",
+    "base64",
+    "python",
+    "url",
+    "safe",
+    "base",
+    "64"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/bryancolligan/angular-urlsafe-base64",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
