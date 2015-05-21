@@ -75,7 +75,7 @@
 
         function urlsafe_encode(s){
         	BETA = URLSAFE_ALPHA;
-        	return decode(s);
+        	return encode(s);
         }
 
         function encode(s) {
