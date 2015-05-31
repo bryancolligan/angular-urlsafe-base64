@@ -16,7 +16,7 @@ bower install angular-urlsafe-base64
 
 ```javascript
 angular
-    .module('myApp', ['base64'])
+    .module('myApp', ['angular-urlsafe-base64'])
     .controller('myController', [
     
         '$base64', '$scope', 
@@ -35,7 +35,7 @@ You can encode unicode strings using base64 as described [here](https://develope
 
 ```javascript
 angular
-    .module('myApp', ['base64'])
+    .module('myApp', ['angular-urlsafe-base64'])
     .controller('myUnicodeController', [
     
         '$base64', '$scope', 
