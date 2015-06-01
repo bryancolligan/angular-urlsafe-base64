@@ -35,7 +35,6 @@
 
                 if (imax % 4 != 0) {
                     for(var i=1; (imax % 4)>= i; i++ ){
-                        console.log(s);
                         s = s + "=";
                         imax++;
                     }
