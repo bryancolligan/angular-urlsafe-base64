@@ -23,7 +23,7 @@ angular
         function($base64, $scope) {
         
             $scope.encoded = $base64.encode('a string');
-            $scope.urlsafe_encoded = $base64.url_safeencode('a string');
+            $scope.urlsafe_encoded = $base64.urlsafe_encode('a string');
             $scope.decoded = $base64.decode('YSBzdHJpbmc=');
             $scope.urlsafe_decoded = $base64.urlsafe_decode('YSBzdHJpbmc=');
     }]);
