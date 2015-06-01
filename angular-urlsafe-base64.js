@@ -60,7 +60,7 @@
                         x.push(String.fromCharCode(b10 >> 16));
                         break;
                 }
-                return x.join('');
+                return x.join('').substr(0,imax);
             }
 
             function getbyte(s, i) {
