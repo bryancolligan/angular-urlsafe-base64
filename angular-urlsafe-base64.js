@@ -32,6 +32,10 @@
                     return s;
                 }
 
+                if (imax % 4 != 0) {
+                throw "Cannot decode base64, wrong variable length supplied";
+                }
+
 
                 pads = 0;
                 if (s.charAt(imax - 1) == PADCHAR) {
@@ -60,7 +64,7 @@
                         x.push(String.fromCharCode(b10 >> 16));
                         break;
                 }
-                return x.join('').substr(0,imax);
+                return x.join('');
             }
 
             function getbyte(s, i) {
