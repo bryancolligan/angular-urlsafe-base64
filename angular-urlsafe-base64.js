@@ -11,11 +11,12 @@
             var BETA = ALPHA;
 
             function getbyte64(s, i) {
-                var idx = BETA.indexOf(s.charAt(i));
-                if (idx == -1) {
-                    throw "Cannot decode base64";
-                }
-                return idx;
+                    var idx = BETA.indexOf(s.charAt(i));
+                    if (idx == -1) {
+                        console.log(s.charAt(i));
+                        throw "Cannot decode base64";
+                    }
+                    return idx;
             }
 
             function urlsafe_decode(s) {
@@ -33,7 +34,11 @@
                 }
 
                 if (imax % 4 != 0) {
-                throw "Cannot decode base64, wrong variable length supplied";
+                    for(var i=1; (imax % 4)>= i; i++ ){
+                        console.log(s);
+                        s = s + "=";
+                        imax++;
+                    }
                 }
 
 
